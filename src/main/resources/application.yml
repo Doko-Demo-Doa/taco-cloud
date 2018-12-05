@@ -11,9 +11,16 @@ spring:
     username: tacodb
     password: tacopassword
 
+  profiles:
+    active:
+      - prod
+      - audit
+      - ha
+
 logging:
   level:
     root: WARN
+    tacos: DEBUG
     org:
       springframework:
         security: DEBUG
