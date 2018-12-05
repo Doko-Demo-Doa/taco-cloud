@@ -1,14 +1,25 @@
 package tacos.data;
 
+import java.util.List;
+
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
+
 import tacos.Order;
 import tacos.User;
 
-import java.util.List;
+public interface OrderRepository 
+         extends CrudRepository<Order, Long> {
 
-public interface OrderRepository extends CrudRepository<Order, Long> {
-    User findByUsername(String username);
+  // tag::findByUser_paged[]
+  List<Order> findByUserOrderByPlacedAtDesc(
+          User user, Pageable pageable);
+  // end::findByUser_paged[]
 
-    List<Order> findByUserOrderByPlacedAtDesc(User user, Pageable pageable);
+  /*
+  // tag::findByUser[]
+  List<Order> findByUserOrderByPlacedAtDesc(User user);
+  // end::findByUser[]
+   */
+
 }
