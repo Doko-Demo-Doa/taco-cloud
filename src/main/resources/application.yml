@@ -15,3 +15,6 @@ logging:
         security: DEBUG
   path: $HOME/doko/Downloads/
   file: TacoCloud.log
+
+greeting:
+  welcome: ${spring.application.name}
