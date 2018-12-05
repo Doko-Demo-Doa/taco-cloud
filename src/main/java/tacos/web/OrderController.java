@@ -65,6 +65,7 @@ public class OrderController {
         return "redirect:/";
     }
 
+    @GetMapping
     public String ordersForUser(@AuthenticationPrincipal User user, Model model) {
         Pageable pageable = PageRequest.of(0, props.getPageSize());
 

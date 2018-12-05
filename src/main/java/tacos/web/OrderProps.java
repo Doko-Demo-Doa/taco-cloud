@@ -8,6 +8,9 @@ import org.springframework.validation.annotation.Validated;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
+/**
+ * Specify Orders properties (such as pagination size).
+ */
 @Component
 @ConfigurationProperties(prefix = "taco.orders")
 @Data
