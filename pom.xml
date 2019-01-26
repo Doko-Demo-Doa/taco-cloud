@@ -6,7 +6,7 @@
     <groupId>sia</groupId>
     <artifactId>taco-cloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>taco-cloud</name>
     <description>Taco Cloud Example</description>
@@ -25,6 +25,7 @@
     </properties>
     <modules>
         <module>tacocloud-api</module>
+        <module>tacocloud-domain</module>
     </modules>
 
 </project>
